@@ -9,9 +9,9 @@
 	<description>renren-generator</description>
 
 	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.2.6.RELEASE</version>
+		<groupId>com.bailiny.gulimall</groupId>
+		<artifactId>gulimall</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
 	<properties>
@@ -30,6 +30,7 @@
 		<mssql.version>4.0</mssql.version>
 		<oracle.version>11.2.0.3</oracle.version>
 		<mongo.version>3.11.0</mongo.version>
+		<skipTests>true</skipTests>
 	</properties>
 
 	<dependencies>
@@ -134,6 +135,7 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>2.2.4.RELEASE</version>
 			</plugin>
 		</plugins>
 	</build>

@@ -55,16 +55,16 @@
         </dependency>
 
         <!--        服务注册/发现-->
-        <dependency>
+        <!--<dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
 
-        <!--        配置中心来做配置管理-->
+        &lt;!&ndash;        配置中心来做配置管理&ndash;&gt;
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
-        </dependency>
+        </dependency>-->
 
         <dependency>
             <groupId>javax.validation</groupId>
