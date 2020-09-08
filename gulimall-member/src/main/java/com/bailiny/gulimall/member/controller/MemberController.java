@@ -1,14 +1,12 @@
 package com.bailiny.gulimall.member.controller;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Map;
 
+import com.bailiny.gulimall.member.feign.CouponFeignService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.bailiny.gulimall.member.entity.MemberEntity;
 import com.bailiny.gulimall.member.service.MemberService;
@@ -29,6 +27,14 @@ import com.bailiny.common.utils.R;
 public class MemberController {
     @Autowired
     private MemberService memberService;
+    @Autowired
+    private CouponFeignService couponFeignService;
+
+    @GetMapping("/testFeign")
+    public R testFeign() {
+        R list = couponFeignService.list(new HashMap<>());
+        return list;
+    }
 
     /**
      * 列表
