@@ -36,7 +36,6 @@ public class CouponController {
     @RequestMapping("/list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = couponService.queryPage(params);
-
         return R.ok().put("page", page);
     }
 
